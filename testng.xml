@@ -4,12 +4,13 @@
     <test verbose="2" preserve-order="true" name="Regression GC">
         <parameter name="browser" value="chrome"></parameter>
         <classes>
+            <class name="com.sogeti.sogeti.seleniumHelper.Config"></class>
             <class name="com.sogeti.sogeti.TestCases.AutomationSeiteTest">
                 <methods>
                     <include name="automationTest"/>
                 </methods>
             </class>
-           <class name="com.sogeti.sogeti.TestCases.CountryTest">
+            <class name="com.sogeti.sogeti.TestCases.CountryTest">
                 <methods>
                     <include name="AllCountry"/>
                 </methods>

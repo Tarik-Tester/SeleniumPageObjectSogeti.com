@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Regression"
+<testsuite name="End to End Firefox"
            tests="1"
            failures="0"
            errors="0"
            skipped="0"
-           time="3,112">
+           time="2,354">
     <properties></properties>
 
 
 
             <testcase
                 name="automationTest"
-                time="3,112"
+                time="2,354"
                 classname="com.sogeti.sogeti.TestCases.AutomationSeiteTest">
             </testcase>
 </testsuite>

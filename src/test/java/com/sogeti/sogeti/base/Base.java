@@ -1,5 +1,6 @@
 package com.sogeti.sogeti.base;
-
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 import com.sogeti.sogeti.tools.WebListener;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +19,8 @@ public class Base {
     public static Properties prop;
     public static EventFiringWebDriver e_driver;
     public static WebListener webList;
+    public static ExtentReports extentReporter;
+    public static ExtentTest log;
 
     public Base() throws IOException {
         prop = new Properties();

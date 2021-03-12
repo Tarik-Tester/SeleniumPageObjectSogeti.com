@@ -1,5 +1,6 @@
 package com.sogeti.sogeti.TestCases;
 
+import com.relevantcodes.extentreports.LogStatus;
 import com.sogeti.sogeti.base.Base;
 import com.sogeti.sogeti.pages.AutomationPage;
 import com.sogeti.sogeti.pages.HomePage;
@@ -7,6 +8,7 @@ import com.sogeti.sogeti.seleniumHelper.Helper;
 import com.sogeti.sogeti.tools.ScreenshotUtil;
 import org.openqa.selenium.*;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -32,7 +34,8 @@ public class CountryTest extends Base {
 
     @Parameters({"browser"})
     @BeforeMethod
-    public void StartBrowser(String browser) throws IOException {
+    public void StartBrowser(String browser, Method method) throws IOException {
+        log = extentReporter.startTest(method.getName());
         SetUp(browser);
         automation = new AutomationPage();
         home = new HomePage();
@@ -42,7 +45,15 @@ public class CountryTest extends Base {
     }
 
     @AfterMethod
-    public void close() {
+    public void close(Method method, ITestResult result) {
+
+        if (result.getStatus() == ITestResult.SUCCESS){
+            log.log(LogStatus.PASS, "Test pass");
+        } else if (result.getStatus() == ITestResult.FAILURE){
+            log.log(LogStatus.FAIL, "Test fehlgeschlagen");
+        } else { log.log(LogStatus.SKIP, "Test Skip");
+        }
+
         cleanUp();
     }
 
@@ -52,7 +63,7 @@ public class CountryTest extends Base {
         int fehler = 0;
         List<String> fehler_liste = new ArrayList<>();
 
-        ArrayList<String> Cityliste = new ArrayList<String>();
+        ArrayList<String> Cityliste = new ArrayList<>();
         Cityliste.add("Sogeti Belgium");
         Cityliste.add("Sogeti Finland");
         Cityliste.add("Sogeti France");
@@ -76,7 +87,7 @@ public class CountryTest extends Base {
             countryList.get(i).click();
             //countryList.get(i).getText();
             System.out.println("*********" + countryList.get(i).getText() + "**********");
-            ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+            ArrayList<String> tabs2 = new ArrayList<>(driver.getWindowHandles());
             //driver.switchTo().window(tabs2.get(1));
             helper.wechselzuTab1();
             Thread.sleep(1000);

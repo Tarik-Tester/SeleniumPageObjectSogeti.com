@@ -41,14 +41,11 @@ public class WebListener implements WebDriverEventListener {
     @Override
     public void beforeNavigateBack(WebDriver driver) {
         System.out.println("Navigating back to previous page");
-
     }
 
     @Override
     public void afterNavigateBack(WebDriver driver) {
         System.out.println("Navigated back to previous page");
-
-
     }
 
     @Override

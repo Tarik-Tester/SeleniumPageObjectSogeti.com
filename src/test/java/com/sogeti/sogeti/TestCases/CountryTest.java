@@ -65,7 +65,7 @@ public class CountryTest extends Base {
 
         ArrayList<String> Cityliste = new ArrayList<>();
         Cityliste.add("Sogeti Belgium");
-        Cityliste.add("Sogeti Finland");
+        Cityliste.add("Sogeti Finlandddd");
         Cityliste.add("Sogeti France");
         Cityliste.add("Sogeti Deutschland");
         Cityliste.add("Sogeti Ireland");
@@ -99,7 +99,6 @@ public class CountryTest extends Base {
             try {
                 Assert.assertTrue(actualResult.contains(expectedResult));
             } catch (AssertionError e) {
-                ScreenshotUtil.takePicture(method.getName());
                 fehler++;
                 fehler_liste.add("Eine Abweichung ist aufgetretten: \n Expected: - " + expectedResult + "\n Actual: - " + actualResult);
             }
@@ -120,7 +119,7 @@ public class CountryTest extends Base {
             fail("\n Test failed \n");
 
         }
-
+        ScreenshotUtil.takePicture(method.getName());
 
     }
 

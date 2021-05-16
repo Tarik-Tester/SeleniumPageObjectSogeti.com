@@ -8,6 +8,7 @@
             <class name="com.sogeti.sogeti.TestCases.AutomationSeiteTest">
                 <methods>
                     <include name="automationTest"/>
+                    <include name="test1"/>
                 </methods>
             </class>
             <class name="com.sogeti.sogeti.TestCases.CountryTest">
@@ -20,6 +21,7 @@
     <test verbose="2" preserve-order="true" name="End to End Firefox">
         <parameter name="browser" value="ff"></parameter>
         <classes>
+            <class name="com.sogeti.sogeti.seleniumHelper.Config"></class>
             <class name="com.sogeti.sogeti.TestCases.AutomationSeiteTest">
                 <methods>
                     <include name="automationTest"/>

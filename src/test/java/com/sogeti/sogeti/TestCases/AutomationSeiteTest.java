@@ -33,7 +33,6 @@ public class AutomationSeiteTest extends Base {
     @BeforeMethod
     public void StartBrowser(String browser, Method method) throws IOException {
         log = extentReporter.startTest(method.getName());
-
         SetUp(browser);
         home = new HomePage();
         automationPage = new AutomationPage();
@@ -72,6 +71,10 @@ public class AutomationSeiteTest extends Base {
         System.out.println("**************" +actualResultTitle+ "*************");
         Assert.assertEquals(actualResultTitle, expectedResultTitle);
         ScreenshotUtil.takePicture(method.getName());
+    }
+    @Test
+    public void test1(){
+        System.out.println("Tarik");
     }
 
 

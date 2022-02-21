@@ -65,7 +65,7 @@ public class CountryTest extends Base {
 
         ArrayList<String> Cityliste = new ArrayList<>();
         Cityliste.add("Sogeti Belgium");
-        Cityliste.add("Sogeti Finlandddd");
+        Cityliste.add("Sogeti Finland");
         Cityliste.add("Sogeti France");
         Cityliste.add("Sogeti Deutschland");
         Cityliste.add("Sogeti Ireland");

@@ -36,7 +36,7 @@ public class Helper extends Base {
         return element.getText();
     }
 
-   /* public void waitForClickable(WebElement by, int timer) {
+   public void waitForClickable(WebElement by, int timer) {
         int attempts = 0;
         while (attempts < 4) {
             try {
@@ -53,9 +53,9 @@ public class Helper extends Base {
             }
             attempts++;
         }
-    }*/
+    }
 
-   /* public boolean elementExists(WebElement element, int timer) {
+   public boolean elementExists(WebElement element, int timer) {
         try {
             WebDriverWait exists = new WebDriverWait(driver, timer);
             exists.ignoring(StaleElementReferenceException.class).until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(element)));
@@ -64,7 +64,7 @@ public class Helper extends Base {
         } catch (StaleElementReferenceException | TimeoutException | NoSuchElementException | NoSuchWindowException e) {
             return false;
         }
-    }*/
+    }
     public void mouseOver(WebElement element){
         Actions action = new Actions(driver);
         action.moveToElement(element).build().perform();

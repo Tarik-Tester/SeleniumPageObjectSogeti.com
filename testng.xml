@@ -18,7 +18,7 @@
             </class>
         </classes>
     </test>
-    <test verbose="2" preserve-order="true" name="End to End Firefox">
+   <!-- <test verbose="2" preserve-order="true" name="End to End Firefox">
         <parameter name="browser" value="ff"></parameter>
         <classes>
             <class name="com.sogeti.sogeti.seleniumHelper.Config"></class>
@@ -33,5 +33,5 @@
                 </methods>
             </class>
         </classes>
-    </test>
+    </test>-->
 </suite>

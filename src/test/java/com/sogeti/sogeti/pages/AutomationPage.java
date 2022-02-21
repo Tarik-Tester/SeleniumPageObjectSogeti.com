@@ -15,8 +15,12 @@ public class AutomationPage extends Base {
     @FindBy(className = "page-heading")
     public WebElement AutomationWording;
 
+
     @FindBy(xpath = "//*[@class= 'selected has-children  expanded level2 hover']")
     public WebElement AutomationIsAktiv;
+
+    @FindBy(xpath = "//*[@class= 'selected has-children  expanded level2 hover']")
+    public WebElement test;
 
     @FindBy(xpath = "//*[@class= 'selected  current expanded']")
     public WebElement ServicesIsAktiv;

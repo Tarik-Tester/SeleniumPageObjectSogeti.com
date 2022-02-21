@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Regression GC"
-           tests="1"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="0,002">
+           time="3,428">
     <properties></properties>
 
 
 
             <testcase
+                name="automationTest"
+                time="3,428"
+                classname="com.sogeti.sogeti.TestCases.AutomationSeiteTest">
+            </testcase>
+            <testcase
                 name="test1"
-                time="0,002"
+                time="0,000"
                 classname="com.sogeti.sogeti.TestCases.AutomationSeiteTest">
             </testcase>
 </testsuite>

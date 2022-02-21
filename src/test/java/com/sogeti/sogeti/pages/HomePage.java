@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class HomePage extends Base {
     @FindBy(xpath = "//*[@class='acceptCookie' or contains(@class,'eu-cookie-compliance-secondary-button btn')]")
     public WebElement acceptCookie;
+
     @FindBy(xpath = "//*[text()='Worldwide']")
     public WebElement WorldWide;
 
